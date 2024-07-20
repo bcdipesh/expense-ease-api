@@ -1,9 +1,7 @@
 package app.vercel.dipeshbc.expensetrackerapi.transaction;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,5 +29,11 @@ public class TransactionController {
     @GetMapping("/users/{userId}")
     List<Transaction> findByUserId(@PathVariable String userId) {
         return transactionRepository.findAllByUserId(userId);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void deleteById(@PathVariable String id) {
+        transactionRepository.deleteById(id);
     }
 }
