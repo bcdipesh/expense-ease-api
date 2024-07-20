@@ -7,10 +7,10 @@ import org.springframework.data.relational.core.mapping.Table;
 import java.time.LocalDateTime;
 
 @Table("Transaction")
-public record Transaction(
+public record Transaction (
     @Id
     String id,
-    String text,
+    String description,
     Double amount,
     @Column("userId")
     String userId,

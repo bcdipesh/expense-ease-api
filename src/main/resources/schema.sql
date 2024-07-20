@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS "User" (
 
 CREATE TABLE IF NOT EXISTS "Transaction" (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    text VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
     amount FLOAT NOT NULL,
     "userId" VARCHAR(255) NOT NULL,
     "createdAt" TIMESTAMP DEFAULT NOW() NOT NULL
