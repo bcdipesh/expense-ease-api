@@ -42,4 +42,10 @@ public class TransactionController {
     Transaction save(@RequestBody Transaction transaction) {
         return transactionService.save(transaction.description(), transaction.amount(), transaction.userId());
     }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    Transaction update(@RequestBody Transaction transaction) {
+        return transactionService.update(transaction);
+    }
 }

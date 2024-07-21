@@ -35,7 +35,7 @@ public class TransactionService {
         transactionRepository.deleteById(id);
     }
 
-    public Transaction save(String description, Double amount, String userId) {
+    Transaction save(String description, Double amount, String userId) {
         String id = UUID.randomUUID().toString();
         LocalDateTime createdAt = LocalDateTime.now();
 
@@ -43,4 +43,9 @@ public class TransactionService {
         jdbcAggregateTemplate.insert(transaction);
         return transactionRepository.save(transaction);
     }
+
+    Transaction update(Transaction transaction) {
+        return transactionRepository.save(transaction);
+    }
+
 }
