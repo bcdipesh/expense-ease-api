@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/expensetrackerapi-0.0.1-SNAPSHOT.jar expensetrackerapi.jar
+COPY --from=build /target/expenseease-0.0.1-SNAPSHOT.jar expenseease.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "expensetrackerapi.jar"]
+ENTRYPOINT ["java", "-jar", "expenseease.jar"]

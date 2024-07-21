@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>app.vercel.dipeshbc</groupId>
-	<artifactId>expensetrackerapi</artifactId>
+	<artifactId>expenseeaseapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>expensetrackerapi</name>
-	<description>Rest API for Expense Tracker web app.</description>
+	<name>expenseeaseapi</name>
+	<description>Rest API for Expense Ease web app.</description>
 	<url/>
 	<licenses>
 		<license/>
