@@ -1,13 +1,13 @@
-package app.vercel.dipeshbc.expensetrackerapi;
+package app.vercel.dipeshbc.expenseeaseapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExpenseEaseapiApplication {
+public class ExpenseEaseApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExpenseEaseapiApplication.class, args);
+		SpringApplication.run(ExpenseEaseApiApplication.class, args);
 	}
 
 }

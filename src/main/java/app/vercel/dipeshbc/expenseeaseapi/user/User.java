@@ -1,4 +1,4 @@
-package app.vercel.dipeshbc.expensetrackerapi.user;
+package app.vercel.dipeshbc.expenseeaseapi.user;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;

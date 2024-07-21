@@ -1,4 +1,4 @@
-package app.vercel.dipeshbc.expensetrackerapi.user;
+package app.vercel.dipeshbc.expenseeaseapi.user;
 
 import org.springframework.data.repository.ListCrudRepository;
 
