@@ -1,5 +1,6 @@
 package app.vercel.dipeshbc.expenseeaseapi.transaction;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,8 +18,8 @@ public class TransactionController {
     }
 
     @GetMapping
-    List<Transaction> findAll() {
-        return transactionService.findAll();
+    List<Transaction> findAll(Pageable pageable) {
+        return transactionService.findAll(pageable);
     }
 
     @GetMapping("/{id}")

@@ -1,5 +1,8 @@
 package app.vercel.dipeshbc.expenseeaseapi.transaction;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jdbc.core.JdbcAggregateTemplate;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +22,8 @@ public class TransactionService {
         this.jdbcAggregateTemplate = jdbcAggregateTemplate;
     }
 
-    List<Transaction> findAll() {
-        return transactionRepository.findAll();
+    List<Transaction> findAll(Pageable pageable) {
+        return transactionRepository.findAll(PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), pageable.getSortOr(Sort.by(Sort.Direction.DESC, "createdAt")))).getContent();
     }
 
     Optional<Transaction> findById(String id) {
