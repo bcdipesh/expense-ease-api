@@ -7,7 +7,7 @@
 #EXPOSE 8080
 #ENTRYPOINT ["java", "-jar", "expense-ease-api.jar"]
 
-# Using Oracle GraalVM for JDK 17
+# Using Oracle GraalVM
 FROM container-registry.oracle.com/graalvm/native-image:21-ol8 AS builder
 
 # Install locale and gzip
@@ -35,4 +35,3 @@ EXPOSE 8080
 COPY --from=builder /build/target/expense-ease-api /app
 
 ENTRYPOINT ["/app"]
-
