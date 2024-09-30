@@ -24,6 +24,3 @@ spring:
 springdoc:
   swagger-ui:
     path: '/docs'
-
-
-#    url: jdbc:postgresql://ep-small-union-a5zwe89q.us-east-2.aws.neon.tech/expense_tracker?user=neondb_owner&password=wMHGLp6aUc5O&sslmode=require
